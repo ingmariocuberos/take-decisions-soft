@@ -1,6 +1,5 @@
 export const promptToChatGpt = (decisionType, convertedOptions, context) => {
-  return `
-    ¿Podrías ayudarme a tomar una decisión importante en mi vida? Te voy a dar el tipo de decisión, las opciones que tengo y el contexto de la situación:
+  return `¿Podrías ayudarme a tomar una decisión importante en mi vida? Te voy a dar el tipo de decisión, las opciones que tengo y el contexto de la situación:
     El tipo de decisión es: ${decisionType},
     Las opciones que tengo son las siguientes:
     ${ convertedOptions }

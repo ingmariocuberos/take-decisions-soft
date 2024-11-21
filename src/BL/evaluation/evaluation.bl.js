@@ -31,18 +31,3 @@ const askToGpt = async( promptMsg ) =>{
 
     return completion.choices[0].message.content;
 }
-
-const identifyMissingInfo = (missingInfo, attempt) => {
-
-    if(missingInfo && attempt === '1'){
-        return `
-
-        ❌ ${missingInfo}. Por favor, provee esta información en un solo mensaje`;
-    } else if(missingInfo && attempt === '2'){
-        return `
-            
-        ❌❌ ${missingInfo}. La interacción termina aquí. *Si deseas ordenar un pedido vuelve a escribir Hola! en este chat*.`;
-    } else {
-        return '';
-    }
-}

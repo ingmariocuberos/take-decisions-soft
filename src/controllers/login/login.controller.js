@@ -1,20 +1,11 @@
-import { loginBl } from "../../BL/login/login.bl.js"
-import { standardResponse } from "../../helpers/http-response/standard-response.helper.js";
+import { login } from "./handlers/login.handler.js";
+import { register } from "./handlers/register.handler.js";
+import { deleteUserByUsername } from "./handlers/deleteUserByUsername.handler.js";
+import { changePassword } from "./handlers/change-password.handler.js";
 
-export const loginController = async(req, res) =>{
-  const successLogin = await loginBl.validateLogin(req.body);
-  
-  if(successLogin){
-    standardResponse(
-      res,
-      "Usuario logueado con exito"
-    )
-  } else {
-    standardResponse(
-      res,
-      'Contraseña incorrecta o el usuario no existe',
-      false,
-      401
-    ) 
-  }
+export const loginController = {
+  login,
+  register,
+  deleteUserByUsername,
+  changePassword
 }

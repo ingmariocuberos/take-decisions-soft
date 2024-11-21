@@ -1,3 +1,6 @@
+import { decisionBl } from "../../../BL/decision/decision.bl.js";
+import { standardResponse } from "../../../helpers/http-response/standard-response.helper.js";
+
 export const getAllTypes = async (_, res) => {
   try {
     const allDecisionTypes = await decisionBl.getAllTypes();
