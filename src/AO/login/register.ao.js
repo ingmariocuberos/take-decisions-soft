@@ -1,4 +1,4 @@
-import { userModel } from "../../models/user.model.js";
+import { userModel } from "../../models/user/user.model.js";
 
 export const registerAo = {
   createUser: async (username, password) => {

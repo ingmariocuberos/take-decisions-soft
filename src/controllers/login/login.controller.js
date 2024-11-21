@@ -5,18 +5,16 @@ export const loginController = async(req, res) =>{
   const successLogin = await loginBl.validateLogin(req.body);
   
   if(successLogin){
-    res.send(
-      standardResponse(
-        "Usuario logueado con exito"
-      )
-    );
-  } else {
-    res.send(
-      standardResponse(
-        'Contraseña incorrecta o el usuario no existe',
-        false,
-        401
-      ) 
+    standardResponse(
+      res,
+      "Usuario logueado con exito"
     )
+  } else {
+    standardResponse(
+      res,
+      'Contraseña incorrecta o el usuario no existe',
+      false,
+      401
+    ) 
   }
 }

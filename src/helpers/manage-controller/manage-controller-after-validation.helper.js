@@ -7,8 +7,7 @@ export const manageController = (controller) => {
     if (errors.isEmpty()) {
       return controller(req, res);
     }
-    res.status(422).json(
-      standardResponse(errors.array()[0].msg, false, 403)
-    )
+    console.log(errors);
+    standardResponse(res, errors.array()[0].msg, false, 403)
   }
 }

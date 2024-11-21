@@ -4,11 +4,9 @@ import { standardResponse } from "../../helpers/http-response/standard-response.
 export const registerController = async (req, res) => {
   try {
     await registerBl.createUser(req.body);
-    res.send( standardResponse('Usuario creado con éxito') );
+    standardResponse(res, 'Usuario creado con éxito');
   } catch (error) {
-    res.send(
-      standardResponse(`El usuario ${req.body.username} ya existe`)
-    );
+    standardResponse(res, `El usuario ${req.body.username} ya existe`)
     console.log(error);
   }
 }
