@@ -5,7 +5,7 @@ import { registerDto } from "../../DTO/login/register.dto.js"
 import { manageController } from "../../helpers/manage-controller/manage-controller-after-validation.helper.js"
 
 export const loginRouter = (app) => {
-  app.get(
+  app.post(
     '/login', 
     registerDto, 
     manageController(loginController.login)

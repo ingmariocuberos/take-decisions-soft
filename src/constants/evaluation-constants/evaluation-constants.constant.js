@@ -6,5 +6,6 @@ export const promptToChatGpt = (decisionType, convertedOptions, context) => {
     Este es el contexto de mi situación:
     ${context}
     Por favor, ayúdame a tomar la decisión más centrada con respecto a mi contexto. Dame tus consideraciones, pros y contras de opción, posibles consecuencias y para finalizar, dime para tí cual sería la mejor opción a tomar.
-    Ten en cuenta que al ser la decisión tan importante en mi vida, requiero que te decantes por una de las opciones que te estoy dando. A pesar de ello, si me quieres dar algún consejo adicional te lo agradeceré, pero es necesario que me digas exactamente cual de las opciones que te estoy dando sería mejor para mi y para mi contexto actual`
+    Ten en cuenta que al ser la decisión tan importante en mi vida, requiero que te decantes por una de las opciones que te estoy dando. A pesar de ello, si me quieres dar algún consejo adicional te lo agradeceré, pero es necesario que me digas exactamente cual de las opciones que te estoy dando sería mejor para mi y para mi contexto actual.
+    Por favor, también tener en cuenta que si esta consulta no tiene sentido, no contestes evaluándola, sino que contestes algo como: No se aportó información para tomar una decisión`
 }
